@@ -27,8 +27,8 @@
 #include "drv_gpio.h"
 #include "interrupt.h"
 
-#define DBG_SECTION_NAME  "GPIO"
-#define DBG_LEVEL         DBG_WARNING
+#define DBG_TAG  "GPIO"
+#define DBG_LVL  DBG_WARNING
 #include <rtdbg.h>
 
 #define readl(addr)           (*(volatile unsigned int *)(addr))
@@ -538,6 +538,7 @@ static const struct rt_pin_ops ops =
     pin_attach_irq,
     pin_detach_irq,
     pin_irq_enable,
+    RT_NULL,
 };
 #endif
 

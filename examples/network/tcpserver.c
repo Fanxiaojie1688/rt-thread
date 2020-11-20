@@ -12,11 +12,11 @@
 
 #define DEBUG_TCP_SERVER
 
-#define DBG_SECTION_NAME               "TCP"
+#define DBG_TAG               "TCP"
 #ifdef DEBUG_TCP_SERVER
-#define DBG_LEVEL                      DBG_LOG
+#define DBG_LVL               DBG_LOG
 #else
-#define DBG_LEVEL                      DBG_INFO /* DBG_ERROR */
+#define DBG_LVL               DBG_INFO /* DBG_ERROR */
 #endif
 #include <rtdbg.h>
 
@@ -229,8 +229,8 @@ static void tcpserver_test(int argc, char** argv)
         {
             if (started)
             {
-                LOG_I("The tcpclient has started!");
-                LOG_I("Please stop tcpclient firstly, by: tcpclient --stop");
+                LOG_I("The tcpserver has started!");
+                LOG_I("Please stop tcpserver firstly, by: tcpserver --stop");
                 return;
             }
 
